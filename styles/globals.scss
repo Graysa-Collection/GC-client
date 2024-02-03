@@ -1,0 +1,48 @@
+@import "./utils/base";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px
+
+  @include response(desktop) {
+    font-size: 50%;
+  }
+  @include response(tab-port) {
+    font-size: 42%;
+  }
+  @include response(s-phone) {
+    font-size: 35%;
+  }
+  @include response(xs-phone) {
+    font-size: 28%;
+  }
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+
+// Slick Slider card height adjustment
+.slick-track {
+  height: 68rem;
+}
+.slick-track .slick-slide > div{
+  height: 100%;
+}
+
+a{
+  font-size: 2rem;
+  font-weight: 600;
+  color: white;
+}
