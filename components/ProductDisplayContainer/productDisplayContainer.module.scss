@@ -1,0 +1,47 @@
+@import '../../styles/utils/base';
+
+.productDisplayContainer{
+    padding: 8.7rem 20rem;
+    background-color: grey;
+
+    .headerContainer{
+        margin-bottom: 2.4rem;
+
+        display: flex;
+        align-items: center;
+
+        .heading{
+            font-size: 3rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: .5rem;
+            color: $color-secondary;
+            white-space: nowrap;
+        }
+        .separator{
+            display: block;
+            margin: 0 2rem;
+            height: 1px;
+            width: 100%;
+            background-color: $color-secondary;
+        }
+    }
+    .reverseHeader{
+        flex-direction: row-reverse;
+    }
+    .listContainer{
+        display: flex;
+        justify-content: space-between;
+        gap: 2.6rem;
+    }
+}
+
+.backgroundColorPink{
+    background-color: $color-light-pink;
+}
+.backgroundColorGreen{
+    background-color: $color-light-green;
+}
+.backgroundColorOrange{
+    background-color: $color-light-orange;
+}

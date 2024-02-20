@@ -1,0 +1,58 @@
+@import '../../styles/utils/base';
+
+.productCard{
+    position: relative;
+
+    padding: 2.4rem 2.4rem 3.5rem 2.4rem;
+    transition: all .25s;
+    cursor: pointer;
+
+    &:hover{
+        background-color: $color-light;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    }
+    
+    .imgContainer{
+        height: 40rem;
+        margin-bottom: 2rem;
+
+        .img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    .title, .price{
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        color: $color-dark;
+        letter-spacing: .3rem;
+    }
+    .title{
+        font-weight: 600;        
+    }
+    .price{
+        font-weight: 300;
+    }
+    .addToCard{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        letter-spacing: .5rem;
+        color: $color-secondary;
+        border: none;
+        background-color: $color-primary;
+        padding: .9rem 1.7rem;
+        cursor: pointer;
+        transition: all .25s;
+    }
+
+    &:hover .addToCard{
+        opacity: 1;
+        z-index: 1;
+    }
+}
