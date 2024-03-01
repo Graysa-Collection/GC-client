@@ -1,8 +1,69 @@
-.footer{
-    height: 5rem;
-    background-color: orangered;
+@import '../../styles/utils/base';
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.footer{
+    padding: 8rem 15rem;
+
+    .contentContainer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+
+        .logoContainer{
+            height: 8.2rem;
+            width: 39rem;
+
+            .logo{
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+        .socialMediaContainer{
+            display: flex;
+            gap: 2rem;
+
+            .iconContainer{
+                height: 4rem;
+                width: 4rem;
+                border-radius: 50%;
+            }
+            .icon{
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+            
+        .list{
+            list-style: none;
+
+            display: flex;
+            gap: 5rem;
+
+            .item{
+                font-size: 1.8rem;
+                text-transform: uppercase;
+                letter-spacing: 0.5rem;
+                
+                .link{
+                    text-decoration: none;
+                    color: $color-dark;
+                }
+            }
+        }
+    }
+    .copyrightContainer{
+        padding-top: 3.5rem;
+        margin-top: 2rem;
+        border-top: 1px solid $color-dark;
+
+        .copyright{
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            letter-spacing: .5rem;
+            color: $color-dark;
+            text-align: center;
+        }
+    }
 }

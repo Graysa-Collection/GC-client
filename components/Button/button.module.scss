@@ -1,0 +1,42 @@
+@import '../../styles/utils/base';
+
+.btn{
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: .5rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1rem 3rem;
+    color: grey;
+    border: .2rem solid grey;
+    white-space: nowrap;
+}
+
+.btnSecondary{
+    color: $color-secondary;
+    border: .2rem solid $color-secondary;
+    transition: all .25s;
+    
+    &:hover{
+        color: $color-primary;
+        background-color: $color-secondary;
+    }
+}
+
+.btnPrimary{
+    color: $color-secondary;
+    border: none;
+    padding: 1rem 4rem;
+    background-color: $color-primary;
+    transition: all .25s;
+    
+    &:hover{
+        color: $color-primary;
+        background-color: $color-secondary;
+    }
+}
+
+.btnColorDark{
+    color: $color-dark;
+    border: .2rem solid $color-dark;
+}

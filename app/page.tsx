@@ -1,13 +1,16 @@
-import Link from "next/link";
+import { HeroSection, LatestArrival } from "@/components/Pages/Home";
+import { NewArrivalSection } from "@/components";
+
 import style from "./page.module.scss";
 
 const { home } = style;
 
 const Home = () => {
   return (
-    <main className={home}>
-       <h1>Graysa Collection Home Page</h1>
-       <p><Link href="/about">About</Link></p>
+    <main>
+      <HeroSection/>
+      <LatestArrival/>
+      <NewArrivalSection/>
     </main>
   );
 }
