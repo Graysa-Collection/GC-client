@@ -1,6 +1,10 @@
 import Image from 'next/image';
 
-import bgImage from '@/assets/images/Mask Group 28.png'
+// import bgImage from '@/assets/images/Mask Group 28.png'
+import bgImageBeauty from '@/assets/images/beauty-and-care.svg';
+import bgImageApparel from '@/assets/images/apparel.svg';
+import bgImageBooks from '@/assets/images/books.svg';
+import bgDummy from '@/assets/images/dummy.svg';
 
 import { IHeroSection } from './HeroSection.type';
 import style from './heroSection.module.scss';
@@ -17,7 +21,7 @@ const {
     maskSecondary
 } = style;
 
-const HeroSection = ({ title, description, primary, secondary } : IHeroSection) => {
+const HeroSection = ({ title, description, primary, secondary, bgImage } : IHeroSection) => {
     return(
         <section className={heroSection}>
             <div className={contentContainer}>
@@ -26,7 +30,7 @@ const HeroSection = ({ title, description, primary, secondary } : IHeroSection) 
             </div>
             <div className={bgImgContainer}>
                 <div className={`${mask} ${primary ? maskPrimary : secondary ? maskSecondary : ''}`}/>
-                <Image className={img} src={bgImage} alt='background image' priority/>
+                <Image className={img} src={bgImage === 'apparel' ? bgImageApparel : bgImage === 'beauty' ? bgImageBeauty : bgImage === 'books' ? bgImageBooks : bgDummy} alt='background image' priority/>
             </div>
         </section>
     );

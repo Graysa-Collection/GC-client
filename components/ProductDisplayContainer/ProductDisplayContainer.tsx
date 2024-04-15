@@ -12,7 +12,7 @@ const {
     listContainer,
     backgroundColorPink,
     backgroundColorGreen,
-    backgroundColorOrange,
+    backgroundColorYellow,
     reverseHeader
 } = style;
 
@@ -21,7 +21,7 @@ const ProductDisplayContainer = ({ title, link, bgColor, reverse }: IProductDisp
         <div className={bgColor == 'pink' ? 
             `${backgroundColorPink} ${productDisplayContainer}` : bgColor == 'green' ? 
             `${backgroundColorGreen} ${productDisplayContainer}` : bgColor == 'orange' ? 
-            `${backgroundColorOrange} ${productDisplayContainer}` : productDisplayContainer}
+            `${backgroundColorYellow} ${productDisplayContainer}` : productDisplayContainer}
         >
             <div className={reverse ? `${headerContainer} ${reverseHeader}` : headerContainer}>
                 <h3 className={heading}>{title}</h3>

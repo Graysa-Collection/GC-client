@@ -2,5 +2,6 @@ export interface IHeroSection{
     title: string,
     description: string,
     primary?: boolean,
-    secondary?: boolean
+    secondary?: boolean,
+    bgImage?: String
 }
