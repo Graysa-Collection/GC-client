@@ -1,8 +1,11 @@
+import Image from 'next/image';
+
+import { ProductCard, FilterDropdown } from '@/components';
+import { IProductListSectionProps } from './ProductListSection.type';
+
 import downArrow from '@/assets/icon/downArrow.svg';
 
 import style from './productListSection.module.scss';
-import Image from 'next/image';
-import { ProductCard, FilterDropdown } from '@/components';
 
 const {
     productListSection,
@@ -13,15 +16,14 @@ const {
     icon,
     filter,
     productList,
-    dropdownContent,
-    customCheckbox,
-    titleContainer,
-    title
+    bgColorGreen,
+    bgColorYellow,
+    bgColorPink
 } = style;
 
-const ProductListSection = () => {
+const ProductListSection = ({ bgColor } : IProductListSectionProps) => {
     return(
-        <section className={productListSection}>
+        <section className={bgColor === 'pink' ? `${productListSection} ${bgColorPink}` : bgColor === 'green' ? `${productListSection} ${bgColorGreen}` : bgColor === 'yellow' ? `${productListSection} ${bgColorYellow}` : productListSection}>
             <div className={header}>
                 <h4 className={heading}>popular</h4>
                 <div className={dropdown}>

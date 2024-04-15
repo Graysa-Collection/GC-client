@@ -42,7 +42,7 @@ const Navbar = () => {
                         <span className={highlight}/>
                     </li>
                     <li className={navItem}>
-                        <Link className={navLink} href='/beauty-care'>beauty & care</Link>
+                        <Link className={navLink} href='/beauty-and-care'>beauty & care</Link>
                         <span className={highlight}/>
                     </li>
                     <li className={navItem}>
