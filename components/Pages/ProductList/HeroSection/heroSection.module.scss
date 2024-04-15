@@ -1,0 +1,69 @@
+@import '../../../../styles/utils/base';
+
+.heroSection{
+    position: relative;
+    padding: 14.8rem 5rem;
+
+    .contentContainer{
+        position: relative;
+        z-index: 1;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .heading{
+            font-size: 6rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1rem;
+            color: $color-secondary;
+        }
+        .paragraph{
+            font-size: 2rem;
+            max-width: 47rem;
+            color: $color-light;
+            text-align: center;
+            line-height: 1.4;
+        }
+    }
+    .bgImgContainer{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        // &::after{
+        //     content: '';
+        //     display: block;
+        //     background-color: rgba(#583D2D, 0.5);
+
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     height: 100%;
+        //     width: 100%;
+        // }
+
+        .img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .mask{            
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+        }
+        .maskPrimary{
+            background-color: rgba(#012F1D, 0.5);            
+        }
+        .maskSecondary{
+            background-color: rgba(#583D2D, 0.5);            
+        }
+    }
+}

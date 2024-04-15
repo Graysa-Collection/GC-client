@@ -1,0 +1,108 @@
+@import '../../../../styles/utils/base';
+
+.productListSection{
+    padding: 8.7rem 15rem 12rem 15rem;
+    background-color: $color-light-green;
+
+    display: grid;
+    grid-template-columns: [col-full-start col-filter-start] 30rem [col-filter-end col-productList-start] 1fr [col-productList-end col-full-end];
+    grid-template-rows: [row-start] auto [row-end];
+    row-gap: 2.6rem;
+    column-gap: 12rem;
+
+    .header{
+        grid-column: col-full-start / col-full-end;
+        grid-row: row-start 1 / row-end 1;
+
+        position: relative;
+        padding: 1.3rem 0;
+        border-top: 1px solid $color-dark;
+        border-bottom: 1px solid $color-dark;
+
+        display: flex;
+        justify-content: center;
+
+        .heading{
+            font-size: 3rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: .5rem;
+            color: $color-dark;
+        }
+        .dropdown{
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+
+            .dropdownBtn{
+                font-size: 1.8rem;
+                text-transform: uppercase;
+                letter-spacing: .5rem;
+                color: $color-dark;
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+            }
+            .icon{
+                height: 1rem;
+                width: 1.9rem;
+            }
+        }
+    }
+    .filter{
+        grid-column: col-filter-start / col-filter-end;
+        grid-row: row-start 2 / row-end 2;
+
+        // .dropdown{
+        //     background-color: pink;
+
+        //     .titleContainer{
+        //         cursor: pointer;
+        //         display: flex;
+        //         align-items: center;
+        //         justify-content: space-between;
+        //         gap: 1rem;
+
+        //         .title{
+        //             font-size: 1.8rem;
+        //             text-transform: uppercase;
+        //             letter-spacing: 0.5rem;
+        //         }
+        //         .icon::after{
+        //             content: '';
+        //             display: block;
+        //             height: 0.2rem;
+        //             width: 1.5rem;
+        //             background-color: $color-dark;
+        //         }
+        //     }
+        //     .dropdownContent{
+        //         display: flex;
+        //         flex-direction: column;
+
+        //         .customCheckbox{
+        //             display: flex;
+        //             align-items: center;
+        //             gap: 1rem;
+
+        //             input{
+                        
+        //             }
+        //         }
+        //     }
+        // }
+    }
+    .productList{
+        grid-column: col-productList-start / col-productList-end;
+        grid-row: row-start 2 / row-end 2;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 4.3rem;
+    }
+}
