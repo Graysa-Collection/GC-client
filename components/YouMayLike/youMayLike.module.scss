@@ -1,0 +1,28 @@
+@import '../../styles/utils/base';
+
+.youMayLike{
+    padding: 7.4rem 15rem 0 15rem;
+
+    .headingContainer{
+        padding-top: 3.6rem;
+        padding-bottom: 3.6rem;
+        border-top: 1px solid $color-dark;
+        border-bottom: 1px solid $color-dark;
+
+        .heading{
+            font-size: 4.2rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: .5rem;
+            color: $color-dark;
+            text-align: center;
+        }
+    }
+    .productContainer{
+        padding-top: 5rem;
+        
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+}
