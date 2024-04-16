@@ -1,7 +1,7 @@
 export interface IHeroSection{
     title: string,
     description: string,
-    primary?: boolean,
+    maskColor?: String,
     secondary?: boolean,
     bgImage?: String
 }

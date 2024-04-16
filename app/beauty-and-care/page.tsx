@@ -4,7 +4,7 @@ import { HeroSection, ProductListSection } from "@/components/Pages/ProductList"
 const BeautyAndCare = () => {
     return(
         <>
-            <HeroSection title="beauty & care" bgImage='beauty' description="Lorem Ipsum is simply dummy text of the printing and typesetting industry." primary/>
+            <HeroSection title="beauty & care" bgImage='beauty' description="Lorem Ipsum is simply dummy text of the printing and typesetting industry." maskColor='green'/>
             <NewArrivalSection/>
             <ProductListSection bgColor='green'/>
             <YouMayLike/>

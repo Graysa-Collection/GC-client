@@ -17,11 +17,12 @@ const {
     bgImgContainer,
     img,
     mask,
-    maskPrimary,
-    maskSecondary
+    maskGreen,
+    maskOrange,
+    maskYellow
 } = style;
 
-const HeroSection = ({ title, description, primary, secondary, bgImage } : IHeroSection) => {
+const HeroSection = ({ title, description, maskColor, secondary, bgImage } : IHeroSection) => {
     return(
         <section className={heroSection}>
             <div className={contentContainer}>
@@ -29,7 +30,7 @@ const HeroSection = ({ title, description, primary, secondary, bgImage } : IHero
                 <p className={paragraph}>{description}</p>
             </div>
             <div className={bgImgContainer}>
-                <div className={`${mask} ${primary ? maskPrimary : secondary ? maskSecondary : ''}`}/>
+                <div className={`${mask} ${maskColor === 'green' ? maskGreen : maskColor === 'orange' ? maskOrange : maskColor === 'yellow' ? maskYellow : ''}`}/>
                 <Image className={img} src={bgImage === 'apparel' ? bgImageApparel : bgImage === 'beauty' ? bgImageBeauty : bgImage === 'books' ? bgImageBooks : bgDummy} alt='background image' priority/>
             </div>
         </section>
