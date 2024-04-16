@@ -1,0 +1,32 @@
+@import '../../../../styles/utils/base';
+
+.contentSection{
+    position: relative;
+    background-color: orangered;
+    
+    .bgContainer{
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        .colorPink{
+            background-color: $color-light-pink;
+        }
+        .colorGreen{
+            background-color: $color-light-green;            
+        }
+        .colorYellow{
+            background-color: $color-light-yellow;
+        }
+    }
+    .contentContainer{
+        position: relative;
+        z-index: 1;
+        padding: 10rem 23rem;
+    }
+}
