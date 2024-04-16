@@ -1,0 +1,73 @@
+@import '../../../../styles/utils/base';
+
+.heroSection{
+    position: relative;
+    height: calc(100svh - 24.8rem);
+    background-color: orangered;
+
+    .bgImage{
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        .imageContainer{
+            height: calc(100svh - 24.8rem);
+            background-color: pink;
+
+            .img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+
+    .mask{
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+
+        background: rgba($color: #342014, $alpha: 0.8)
+    }
+
+    .contentContainer{
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 3;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .logoContainer{
+            height: 25rem;
+            width: 20rem;
+
+            .logo{
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+        .description{
+            font-size: 2rem;
+            color: $color-light;
+            text-align: center;
+            max-width: 47rem;
+            margin: 5rem 0;
+        }
+    }
+}

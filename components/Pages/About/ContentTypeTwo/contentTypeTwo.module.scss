@@ -1,0 +1,61 @@
+@import '../../../../styles/utils/base';
+
+.contentTypeTwo{
+    display: flex;
+    gap: 10rem;
+    margin-bottom: 10rem;
+
+    .imageContainer{
+        height: 63rem;
+        max-width: 51rem;
+        padding-top: 1rem;
+        padding-left: 1rem;
+        
+        border-top: 1px solid $color-secondary;
+        border-left: 1px solid $color-secondary;
+        
+        .img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    .reversBorder{
+        padding-left: 0;
+        padding-right: 1rem;
+
+        border-left: none;
+        border-right: 1px solid $color-secondary;
+    }
+    .contentContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .heading{
+            font-size: 3rem;
+            font-weight: 500;
+            color: $color-secondary;
+            text-transform: uppercase;
+            letter-spacing: .5rem;
+
+            display: flex;
+            align-items: center;
+            gap: 5rem;
+        }
+        .description{
+            padding: 4rem 0;
+            font-size: 2rem;
+            color: $color-dark;
+            max-width: 69rem;
+        }
+        .btnContainer{
+            padding-bottom: 5rem;
+            border-bottom: 1px solid $color-secondary;
+        }
+    }
+}
+.reverseContentAlign{
+    justify-content: center;
+}

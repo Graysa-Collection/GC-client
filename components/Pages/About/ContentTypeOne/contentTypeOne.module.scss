@@ -1,0 +1,55 @@
+@import '../../../../styles/utils/base';
+
+.contentTypeOne{
+    display: flex;
+    gap: 10rem;
+    margin-bottom: 10rem;
+
+    .imageContainer{
+        height: 63rem;
+        max-width: 51rem;
+        padding-right: 1rem;
+        padding-bottom: 1rem;
+        
+        border-right: 1px solid $color-secondary;
+        border-bottom: 1px solid $color-secondary;
+        
+        .img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    .contentContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .heading{
+            font-size: 3rem;
+            font-weight: 500;
+            color: $color-secondary;
+            text-transform: uppercase;
+            letter-spacing: .5rem;
+
+            display: flex;
+            align-items: center;
+            gap: 5rem;
+
+            &::after{
+                content: '';
+                display: block;
+                height: 1px;
+                width: 100%;
+                background-color: $color-secondary;
+            }
+        }
+        .description{
+            padding: 4rem 0;
+            font-size: 2rem;
+            color: $color-dark;
+            max-width: 69rem;
+        }
+    }
+}
