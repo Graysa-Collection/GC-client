@@ -34,18 +34,6 @@
         right: 0;
         bottom: 0;
 
-        // &::after{
-        //     content: '';
-        //     display: block;
-        //     background-color: rgba(#583D2D, 0.5);
-
-        //     position: absolute;
-        //     top: 0;
-        //     left: 0;
-        //     height: 100%;
-        //     width: 100%;
-        // }
-
         .img{
             height: 100%;
             width: 100%;
@@ -59,11 +47,14 @@
             height: 100%;
             width: 100%;
         }
-        .maskPrimary{
+        .maskGreen{
             background-color: rgba(#012F1D, 0.5);            
         }
-        .maskSecondary{
+        .maskOrange{
             background-color: rgba(#583D2D, 0.5);            
+        }
+        .maskYellow{
+            background-color: rgba(#464B15, 0.5);            
         }
     }
 }
