@@ -25,19 +25,19 @@ const HeroSection = () => {
         <section className={heroSection}>
             <div className={bgImage}>
                 <div className={imageContainer}>
-                    <Image className={img} src={heroImageOne} alt='hero img one' priority/>
+                    <Image className={img} src={heroImageOne} height={1000} width={1000} alt='hero img one' priority/>
                 </div>
                 <div className={imageContainer}>
-                    <Image className={img} src={heroImageTwo} alt='hero img two' priority/>
+                    <Image className={img} src={heroImageTwo} height={1000} width={1000} alt='hero img two' priority/>
                 </div>
                 <div className={imageContainer}>
-                    <Image className={img} src={heroImageThree} alt='hero img three' priority/>
+                    <Image className={img} src={heroImageThree} height={1000} width={1000} alt='hero img three' priority/>
                 </div>
             </div>
             <div className={mask}/>
             <div className={contentContainer}>
                 <div className={logoContainer}>
-                    <Image className={logo} src={gcLogo} alt='gc logo' priority/>
+                    <Image className={logo} src={gcLogo} height={1000} width={1000} alt='gc logo' priority/>
                 </div>
                 <p className={description}>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 <Button link='#' secondary>shop now</Button>

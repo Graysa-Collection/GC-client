@@ -53,32 +53,6 @@
             display: flex;
             justify-content: space-between;
             gap: 2rem;
-
-            .navItem{
-                font-size: 1.8rem;
-                font-weight: 300;
-                color: $color-dark;
-                letter-spacing: .2rem;
-                text-transform: uppercase;
-
-                .navLink{
-                    text-decoration: none;
-                    color: $color-dark;
-                }
-
-                .highlight{
-                    display: block;
-                    height: .6rem;
-                    width: 0;
-                    margin-top: 1.4rem;
-                    background-color: $color-secondary;
-                    transition: all .25s;
-                }
-
-                .navLink:hover ~ .highlight{
-                    width: 100%;
-                }
-            }
         }
     }
 }
