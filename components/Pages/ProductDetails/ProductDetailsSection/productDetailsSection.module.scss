@@ -1,0 +1,157 @@
+@import '../../../../styles/utils/base';
+
+.productDetailsSection{
+    padding: 5rem 15rem;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10rem;
+
+    .imageContainer{
+        display: grid;
+        grid-template-columns: repeat(4, [col-start] 1fr [col-end]);
+        grid-template-rows: repeat(4, [row-start] 16.5rem [row-end]);
+        gap: 2rem;
+
+        .imgOne{
+            grid-column: col-start 1 / col-end 3;
+            grid-row: row-start 1 / row-end 4;
+        }
+        .imgTwo{
+            grid-column: col-start 4 / col-end 4;
+            grid-row: row-start 1 / row-end 1;
+        }
+        .imgThree{
+            grid-column: col-start 4 / col-end 4;
+            grid-row: row-start 2 / row-end 2;
+        }
+        .imgFour{
+            grid-column: col-start 4 / col-end 4;
+            grid-row: row-start 3 / row-end 3;
+        }
+        .imgFive{
+            grid-column: col-start 4 / col-end 4;
+            grid-row: row-start 4 / row-end 4;
+        }
+
+        .imgOne,
+        .imgTwo,
+        .imgThree,
+        .imgFour,
+        .imgFive{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    .contentContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .heading{
+            font-size: 3rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: .5rem;
+            color: $color-secondary;
+            margin-bottom: 1rem;
+        }
+        .price{
+            display: block;
+            font-size: 2.4rem;
+            letter-spacing: .5rem;
+            margin-bottom: 5rem;
+        }
+        .sizeContainer{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            margin-bottom: 3rem;
+
+            p{
+                font-size: 1.8rem;
+                text-transform: uppercase;
+                margin-right: 1rem;
+                letter-spacing: .3rem;
+            }
+            span{
+                height: 4rem;
+                aspect-ratio: 1;
+
+                font-size: 1.8rem;
+                text-transform: uppercase;
+                padding: .5rem;
+                border-radius: 50%;
+                border: 1px solid $color-light-grey;
+                cursor: pointer;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &:hover{
+                    border: 1px solid $color-dark;
+                }
+            }
+        }
+        .colorContainer{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            margin-bottom: 4rem;
+
+            p{
+                font-size: 1.8rem;
+                text-transform: uppercase;
+                margin-right: 1rem;
+                letter-spacing: .3rem;
+                margin-right: 1rem;
+            }
+            span{
+                display: block;
+                height: 4rem;
+                aspect-ratio: 1;
+                border-radius: 50%;
+                border: 2px solid $color-light-grey;
+
+                &:nth-child(1){
+                    background-color: $color-light-pink;
+                }
+                &:nth-child(2){
+                    background-color: $color-light-green;
+                }
+                &:nth-child(3){
+                    background-color: $color-light-yellow;
+                }
+            }
+        }
+        .btnContainer{
+            margin-bottom: 3rem;
+        }
+        .detailContainer{
+            .heading{
+                font-size: 1.8rem;
+                text-transform: uppercase;
+                font-weight: 400;
+                letter-spacing: .5rem;
+                color: $color-dark;
+            }
+            .border{
+                display: block;
+                height: 1px;
+                width: 100%;
+                max-width: 53rem;
+                background-color: $color-dark;
+                margin: 1rem 0;
+            }
+            .description{
+                font-size: 2rem;
+                line-height: 1.5;
+                max-width: 52rem;
+            }
+        }
+    }
+}

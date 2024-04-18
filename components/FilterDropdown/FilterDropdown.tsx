@@ -20,7 +20,6 @@ const FilterDropdown = () => {
 
     const handleDropdown = () => {
         setIsActive(!isActive)
-        console.log('active');
     }
 
     return(

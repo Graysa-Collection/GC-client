@@ -29,27 +29,27 @@ const Footer = () => {
         <div className={footer}>
             <div className={contentContainer}>
                 <div className={logoContainer}>
-                    <Image className={logo} src={gcLogo} alt='graysa collection logo' priority/>
+                    <Image className={logo} src={gcLogo} height={1000} width={1000} alt='graysa collection logo' priority/>
                 </div>
                 <div className={socialMediaContainer}>
                     <Link href='#'>
                         <div className={iconContainer}>
-                            <Image className={icon} src={facebookIcon} alt='facebook icon' priority/>
+                            <Image className={icon} src={facebookIcon} height={1000} width={1000} alt='facebook icon' priority/>
                         </div>
                     </Link>
                     <Link href='#'>
                         <div className={iconContainer}>
-                            <Image className={icon} src={instagramIcon} alt='instagram icon' priority/>
+                            <Image className={icon} src={instagramIcon} height={1000} width={1000} alt='instagram icon' priority/>
                         </div>
                     </Link>
                     <Link href='#'>
                         <div className={iconContainer}>
-                            <Image className={icon} src={tiktokIcon} alt='tiktok icon' priority/>
+                            <Image className={icon} src={tiktokIcon} height={1000} width={1000} alt='tiktok icon' priority/>
                         </div>
                     </Link>
                     <Link href='#'>
                         <div className={iconContainer}>
-                            <Image className={icon} src={youtubeIcon} alt='youtube icon' priority/>
+                            <Image className={icon} src={youtubeIcon} height={1000} width={1000} alt='youtube icon' priority/>
                         </div>
                     </Link>
                 </div>
