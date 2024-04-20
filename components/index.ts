@@ -6,3 +6,5 @@ export * from './ProductCard';
 export * from './NewArrivalSection';
 export * from './FilterDropdown';
 export * from './YouMayLike';
+export * from './CartSidebar';
+export * from './CheckoutCart'

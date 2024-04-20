@@ -1,0 +1,100 @@
+@import '../../styles/utils/base';
+
+.cart{
+    width: 100%;
+    padding: 2.5rem 2rem 2.5rem 0;
+    border-bottom: 1px solid $color-light-grey;
+
+    display: flex;
+    align-items: center;
+    gap: 3.55rem;
+
+    .imgContainer{
+        height: 12.1rem;
+        width: 9.8rem;
+
+        .img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .contentContainer{
+        display: flex;
+        justify-content: space-between;
+        gap: 6rem;
+
+        .content{
+            .title{
+                font-size: 2rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: .5rem;
+            }
+            .price{
+                font-size: 1.8rem;
+                letter-spacing: .3rem;
+                margin-bottom: 4rem;
+            }
+            .colorSize{
+                font-size: 1.4rem;
+                letter-spacing: .4rem;
+
+                .color{
+                    text-transform: capitalize;
+                }
+                .border{
+                    margin: 0 3rem;
+                }
+                .size{
+                    text-transform: capitalize;
+                }
+            }
+        }
+        .btnContainer{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: end;
+
+            .deleteBtn{
+                height: 1.7rem;
+                width: 1.4rem;
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+
+                .icon{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: contain;
+                }
+            }
+            .quantity{
+                border: 1px solid $color-grey;
+                border-radius: 3px;
+
+                display: flex;
+                justify-content: space-between;
+                gap: 1rem;
+
+                .decrease,
+                .number,
+                .increase{
+                    font-size: 1.8rem;
+                }
+
+                .decrease,
+                .increase{
+                    width: 3rem;
+                    cursor: pointer;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
