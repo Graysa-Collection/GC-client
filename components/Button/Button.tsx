@@ -10,9 +10,15 @@ const {
     btnColorDark
 } = style;
 
-const Button = ({ children, primary, secondary, colorDark, link }: IButtonProps) => {
+const Button = ({ children, primary, secondary, colorDark, link, button, btnType }: IButtonProps) => {
     return(
-        <Link className={`${btn} ${secondary ?btnSecondary : ''} ${primary ? btnPrimary : ''} ${colorDark ? btnColorDark : ''}`} href={link ? link : '#'}>{children}</Link>
+        <>
+            {
+                button ? <button className={`${btn} ${secondary ?btnSecondary : ''} ${primary ? btnPrimary : ''} ${colorDark ? btnColorDark : ''}`} type={btnType}>{children}</button>
+                : <Link className={`${btn} ${secondary ?btnSecondary : ''} ${primary ? btnPrimary : ''} ${colorDark ? btnColorDark : ''}`} href={link ? link : '#'}>{children}</Link>
+
+            }
+        </>
     )
 }
 

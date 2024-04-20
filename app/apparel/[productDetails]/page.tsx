@@ -4,7 +4,6 @@ import { ProductDetailsSection } from "@/components/Pages/ProductDetails"
 const ProductDetailsPage = () => {
     return(
         <>
-            <CartSidebar/>
             <ProductDetailsSection/>
             <NewArrivalSection/>
             <YouMayLike/>

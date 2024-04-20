@@ -1,6 +1,8 @@
 @import '../../styles/utils/base';
 
-.cartSidebar{
+@import '../../styles/utils/base';
+
+.sidebar{
     height: 100svh;
     background-color: rgba($color: pink, $alpha: 0.5);
     
@@ -10,7 +12,7 @@
     width: 100%;
     z-index: 3;
 
-    display: none;
+    // display: none;
     
     .mask{
         background: rgba($color: #000000, $alpha: 0.5);
@@ -31,7 +33,7 @@
         transform: translateX(0);
     }
 
-    .cartContainer{
+    .sidebarContainer{
         height: 100%;
         width: max-content;
         background-color: $color-light;
@@ -47,64 +49,48 @@
 
         transform: translateX(100%);
         transition: all .5s;
-
-        .header{
-            margin-bottom: 4.5rem;
-
-            .shippingPrice{
-                font-size: 1.2rem;
-                font-weight: 300;
-                letter-spacing: .3rem;
-                margin-bottom: 1rem;
-            }
-            .progressBar{
-                position: relative;
-                height: .7rem;
-                width: 100%;
-                background-color: $color-light-grey;
-
-                .progress{
-                    background-color: $color-dark;
-
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    height: 100%;
-                    width: 70%;
-                }
-            }
-        }
-        .heading{
+        
+        .accountHeading{
             font-size: 2.4rem;
             font-weight: 600;
             letter-spacing: .5rem;
             text-transform: uppercase;
             color: $color-secondary;
-            margin-bottom: 3rem;
+            margin-bottom: 1rem;
         }
-        .cartList{
-            height: 100%;
-            overflow: auto;
+        .description{
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            letter-spacing: .3rem;
+            max-width: 40rem;
+            line-height: 1.4;
         }
-        .checkoutBtnContainer{
-            margin-top: auto;
-            padding-top: 2rem;
 
+        .formContainer{
+            padding: 8rem 0;
+
+            .loginHeading{
+                font-size: 2.4rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                margin-bottom: 4rem;
+                text-align: center;
+                color: $color-secondary;
+            }
+        }
+        .signUpBtnContainer{
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             gap: 1rem;
 
-            .totalPrice{
+            .text{
                 font-size: 1.8rem;
                 font-weight: 600;
-                letter-spacing: .5rem;
-            }
-            .note{
-                font-size: 1.2rem;
-                font-weight: 300;
-                letter-spacing: .3rem;
+                text-transform: uppercase;
+                letter-spacing: 0.4rem;
+                margin-bottom: 2rem;
             }
         }
         .crossBtn{
@@ -134,3 +120,4 @@
 .visibleCart{
     display: inline;
 }
+

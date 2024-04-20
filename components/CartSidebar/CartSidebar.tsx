@@ -19,13 +19,17 @@ const {
     cartList,
     shippingPrice,
     crossBtn,
-    icon
+    icon,
+    mask,
+    visibleSidebar,
+    visibleMask
 } = style;
 
 const CartSidebar = () => {
     return(
         <div className={cartSidebar}>
-            <div className={cartContainer}>
+            <div className={`${mask} ${visibleMask}`}/>
+            <div className={`${cartContainer} ${visibleSidebar}`}>
                 <div className={header}>
                     <p className={shippingPrice}>Add 50$ for Free Shipping!</p>
                     <div className={progressBar}>
@@ -50,8 +54,8 @@ const CartSidebar = () => {
                     <span className={note}>Shipping & Taxes will be calculated at Check-out.</span>
                     <Button primary>check out</Button>
                 </div>
+                <button className={crossBtn}><Image className={icon} src={crossIcon} alt='cross icon' height={1000} width={1000} priority/></button>
             </div>
-            <button className={crossBtn}><Image className={icon} src={crossIcon} alt='cross icon' height={1000} width={1000} priority/></button>
         </div>
     );
 };
