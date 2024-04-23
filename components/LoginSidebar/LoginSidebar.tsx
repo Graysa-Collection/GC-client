@@ -4,7 +4,7 @@ import { Button } from '../Button';
 import crossIcon from '@/assets/icon/cross-icon.svg';
 
 import style from './loginSidebar.module.scss';
-import { LoginForm } from '../LoginForm';
+import { LoginForm } from '../Form/LoginForm';
 const {
     sidebar,
     mask,
