@@ -9,4 +9,4 @@ export * from './YouMayLike';
 export * from './CartSidebar';
 export * from './CheckoutCart'
 export * from './LoginSidebar';
-export * from './LoginForm';
+export * from './Form';

@@ -1,0 +1,12 @@
+@import '../../../styles/utils/base';
+
+.signUpForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    .btnContainer{
+        margin-top: 4rem;
+    }
+}

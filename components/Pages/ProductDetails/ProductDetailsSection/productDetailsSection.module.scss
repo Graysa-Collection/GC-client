@@ -1,6 +1,7 @@
 @import '../../../../styles/utils/base';
 
 .productDetailsSection{
+    position: relative;
     padding: 5rem 15rem;
 
     display: grid;
@@ -153,5 +154,19 @@
                 max-width: 52rem;
             }
         }
+    }
+
+    &::before{
+        content: '';
+        display: block;
+        height: 1px;
+        width: 85%;
+        background-color: $color-dark;
+
+        position: absolute;
+        top: 0;
+        left: 50%;
+
+        transform: translateX(-50%);
     }
 }
