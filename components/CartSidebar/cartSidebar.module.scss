@@ -2,7 +2,6 @@
 
 .cartSidebar{
     height: 100svh;
-    background-color: rgba($color: pink, $alpha: 0.5);
     
     position: fixed;
     top: 0;
@@ -10,7 +9,8 @@
     width: 100%;
     z-index: 3;
 
-    // display: none;
+    transform: translateX(100%);
+    transition: all .5s;
     
     .mask{
         background: rgba($color: #000000, $alpha: 0.5);
@@ -132,5 +132,5 @@
     }
 }
 .visibleCart{
-    display: inline;
+    transform: translateX(0);
 }
