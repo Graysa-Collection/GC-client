@@ -16,8 +16,6 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Navbar/>
-        {/* <CartSidebar/> */}
-        {/* <LoginSidebar/> */}
         {children}
         <Footer/>
       </body>

@@ -10,7 +10,7 @@ const {
 
 const YouMayLike = () => {
     return(
-        <div className={youMayLike}>
+        <section className={youMayLike}>
             <div className={headingContainer}>
                 <h1 className={heading}>You May Also Like</h1>
             </div>
@@ -20,7 +20,7 @@ const YouMayLike = () => {
                 <ProductCard/>
                 <ProductCard/>
             </div>
-        </div>
+        </section>
     )
 }
 
