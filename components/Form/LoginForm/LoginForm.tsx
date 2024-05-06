@@ -33,14 +33,14 @@ const LoginForm = () => {
             <FormInput
                 type='text'
                 placeholder='email'
-                onChange={handleChange}
+                inputOnChange={handleChange}
                 name='email'
                 value={email}
             />
             <FormInput
                 type='password'
                 placeholder='password'
-                onChange={handleChange}
+                inputOnChange={handleChange}
                 name='password'
                 value={password}
             />

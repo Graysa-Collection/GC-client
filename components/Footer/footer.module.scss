@@ -3,15 +3,36 @@
 .footer{
     padding: 8rem 15rem;
 
+    @include response(L-desktop){
+        padding: 5rem 10rem;
+    }
+
+    @include response(phone){
+        padding: 5rem;
+    }
+
     .contentContainer{
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(3, max-content);
         justify-content: space-between;
         align-items: center;
         gap: 2rem;
 
+        @include response(tab-port){
+            grid-template-columns: repeat(2, [col-start] max-content [col-end]);
+            grid-template-rows: repeat(2, [row-start] max-content [row-end]);
+            gap: 4rem;
+        }
+
         .logoContainer{
             height: 8.2rem;
             width: 39rem;
+
+            @include response(tab-port){
+                grid-column: col-start 1 / col-end 2;
+                grid-row: row-start 1 / row-end 1;
+                justify-self: center;
+            }
 
             .logo{
                 height: 100%;
@@ -19,32 +40,24 @@
                 object-fit: contain;
             }
         }
-        .socialMediaContainer{
-            display: flex;
-            gap: 2rem;
-
-            .iconContainer{
-                height: 4rem;
-                width: 4rem;
-                border-radius: 50%;
-            }
-            .icon{
-                height: 100%;
-                width: 100%;
-                object-fit: contain;
-            }
-        }
-            
         .list{
             list-style: none;
 
             display: flex;
             gap: 5rem;
+            
+            @include response(phone){
+                gap: 2rem;
+            }
 
             .item{
                 font-size: 1.8rem;
                 text-transform: uppercase;
                 letter-spacing: 0.5rem;
+
+                @include response(phone){
+                    letter-spacing: 0.3rem;
+                }
                 
                 .link{
                     text-decoration: none;
@@ -64,6 +77,11 @@
             letter-spacing: .5rem;
             color: $color-dark;
             text-align: center;
+
+            @include response(phone){
+                font-size: 1rem;
+                letter-spacing: .3rem;
+            }
         }
     }
 }

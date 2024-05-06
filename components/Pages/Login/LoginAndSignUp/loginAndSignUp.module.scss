@@ -2,10 +2,11 @@
 
 .loginSignUp{
     position: relative;
-    padding: 8rem 15rem;
+    padding: 8rem 30rem 8rem 15rem;
 
-    display: flex;
-    gap: 14rem;
+    display: grid;
+    grid-template-columns: max-content repeat(2, 1fr);
+    gap: 15rem;
 
     .heading{
         font-size: 3rem;

@@ -11,14 +11,13 @@ const {
 } = style;
 
 const Button = ({ children, primary, secondary, colorDark, link, button, btnType }: IButtonProps) => {
+    if (button){
+        return(
+            <button className={`${btn} ${secondary ?btnSecondary : ''} ${primary ? btnPrimary : ''} ${colorDark ? btnColorDark : ''}`} type={btnType}>{children}</button>
+        )
+    } 
     return(
-        <>
-            {
-                button ? <button className={`${btn} ${secondary ?btnSecondary : ''} ${primary ? btnPrimary : ''} ${colorDark ? btnColorDark : ''}`} type={btnType}>{children}</button>
-                : <Link className={`${btn} ${secondary ?btnSecondary : ''} ${primary ? btnPrimary : ''} ${colorDark ? btnColorDark : ''}`} href={link ? link : '#'}>{children}</Link>
-
-            }
-        </>
+        <Link className={`${btn} ${secondary ?btnSecondary : ''} ${primary ? btnPrimary : ''} ${colorDark ? btnColorDark : ''}`} href={link ? link : '#'}>{children}</Link>
     )
 }
 

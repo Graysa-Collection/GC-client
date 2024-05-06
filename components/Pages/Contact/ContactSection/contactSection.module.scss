@@ -1,0 +1,140 @@
+@import '../../../../styles/utils/base';
+
+.contactSection{
+    position: relative;
+    padding: 5rem 15rem;
+
+    display: grid;
+    grid-template-columns: repeat(2, [col-start] 1fr [col-end]);
+    grid-template-rows: repeat(2, [row-start] max-content [row-end]);
+    gap: 4rem;
+    
+    @include response(L-desktop){
+        padding: 5rem 10rem;
+    }
+    
+    @include response(tab-port){
+        grid-template-columns: [col-start] 1fr [col-end];
+        grid-template-rows: repeat(3, [row-start] max-content [row-end]);
+    }
+
+    @include response(phone){
+        padding: 5rem;
+    }
+
+    .headingContainer{
+        grid-column: col-start 1 / col-end 2;
+        grid-row: row-start 1 / row-end 1;
+        justify-self: center;
+
+        @include response(tab-port){
+            grid-column: col-start / col-end;
+            grid-row: row-start 1 / row-end 1;
+        }
+
+        .heading{
+    
+            font-size: 3rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: .3rem;
+            color: $color-secondary;
+        }
+    }
+    .inquiryContainer{
+        grid-column: col-start 1 / col-end 1;
+        grid-row: row-start 2 / row-end 2;
+
+        padding: 6.4rem 8.8rem;
+        background-color: $color-light-yellow;
+
+        display: flex;
+        flex-direction: column;
+
+        @include response(L-desktop){
+            padding: 4.4rem 6.8rem;
+        }
+
+        @include response(tab-port){
+            grid-column: col-start / col-end;
+            grid-row: row-start 2 / row-end 2;
+        }
+        
+        .heading{
+            font-size: 3rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: .3rem;
+            margin-bottom: 4rem;
+        }
+        .formContainer{
+            height: 100%;
+        }
+    }
+    .contactContainer{
+        grid-column: col-start 2 / col-end 2;
+        grid-row: row-start 2 / row-end 2;
+
+        padding: 6.4rem 8.8rem;
+        background-color: $color-light-green;
+
+        @include response(L-desktop){
+            padding: 4.4rem 6.8rem;
+        }
+
+        @include response(tab-port){
+            grid-column: col-start / col-end;
+            grid-row: row-start 3 / row-end 3;
+        }
+        
+        .heading{
+            font-size: 3rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: .3rem;
+            margin-bottom: 4rem;
+        }
+        .email{
+            font-size: 1.2rem;
+            margin-bottom: 4rem;
+            letter-spacing: 0.2rem;
+            
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .number{
+            font-size: 1.4rem;
+            font-weight: 400;
+            letter-spacing: 0.2rem;
+            margin-bottom: 4rem;
+
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .address{
+            font-size: 1.2rem;
+            letter-spacing: 0.2rem;
+            margin-bottom: 3rem;
+
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+    }
+
+    &::before{
+        content: '';
+        display: block;
+        height: 1px;
+        width: 85%;
+        background-color: $color-dark;
+
+        position: absolute;
+        top: 0;
+        left: 50%;
+
+        transform: translateX(-50%);
+    }
+}

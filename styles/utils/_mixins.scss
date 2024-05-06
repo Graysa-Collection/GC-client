@@ -22,7 +22,7 @@ $breakpoint arguments choice:
 */
 @mixin response($breakpoint) {
     @if $breakpoint == xs-phone {
-      // media size 430
+      // media size 260
       @media (max-width: 16.25em) {
         @content;
       }
@@ -66,6 +66,12 @@ $breakpoint arguments choice:
     @if $breakpoint == M-desktop {
       // media size 1440px
       @media (max-width: 90em) {
+        @content;
+      }
+    }
+    @if $breakpoint == L-desktop {
+      // media size 1600px
+      @media (max-width: 100em) {
         @content;
       }
     }

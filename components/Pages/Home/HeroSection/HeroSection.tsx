@@ -11,8 +11,7 @@ const {
     img,
     content,
     heading,
-    text,
-    btn
+    text
 } = style;
 
 const HeroSection = () => {

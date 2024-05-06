@@ -31,11 +31,11 @@ const SignUpForm = () => {
     }
     return(
         <form className={signUpForm} onSubmit={() => {}}>
-            <FormInput type='text' placeholder='first name' onChange={handleChange} name='firstName' value={firstName}/>
-            <FormInput type='text' placeholder='last name' onChange={handleChange} name='lastName' value={lastName}/>
-            <FormInput type='email' placeholder='email' onChange={handleChange} name='email' value={email}/>
-            <FormInput type='password' placeholder='password' onChange={handleChange} name='password' value={password}/>
-            <FormInput type='password' placeholder='confirm password' onChange={handleChange} name='confirmPassword' value={confirmPassword}/>
+            <FormInput type='text' placeholder='first name' inputOnChange={handleChange} name='firstName' value={firstName}/>
+            <FormInput type='text' placeholder='last name' inputOnChange={handleChange} name='lastName' value={lastName}/>
+            <FormInput type='email' placeholder='email' inputOnChange={handleChange} name='email' value={email}/>
+            <FormInput type='password' placeholder='password' inputOnChange={handleChange} name='password' value={password}/>
+            <FormInput type='password' placeholder='confirm password' inputOnChange={handleChange} name='confirmPassword' value={confirmPassword}/>
             <div className={btnContainer}>
                 <Button primary button btnType='submit'>Sign Up</Button>
             </div>
