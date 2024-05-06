@@ -3,6 +3,14 @@
 .youMayLike{
     padding: 7.4rem 15rem 0 15rem;
 
+    @include response(L-desktop){
+        padding: 5rem 10rem;
+    }
+
+    @include response(phone){
+        padding: 5rem;
+    }
+
     .headingContainer{
         padding-top: 3.6rem;
         padding-bottom: 3.6rem;

@@ -1,12 +1,14 @@
 @import '../../../styles/utils/base';
 
 .formInput{
-    width: 48rem;
+    width: 100%;
     padding: 1.8rem 3.2rem;
     font-size: 1.8rem;
     letter-spacing: .1rem;
     background-color: $color-light;
     border: 1px solid $color-grey;
+
+    display: flex;
 
     &::placeholder{
         text-transform: uppercase;
