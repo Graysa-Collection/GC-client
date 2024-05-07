@@ -1,0 +1,77 @@
+@import '../../../../styles/utils/base';
+
+.faqCard{
+    padding: 4.5rem 0;
+    // border-top: 1px solid $color-dark;
+    border-bottom: 1px solid $color-dark;
+
+    .questionContainer{
+        display: flex;
+        justify-content: space-between;
+        gap: 3rem;
+        cursor: pointer;
+
+        .ques{
+            font-size: 2.4rem;
+            font-weight: 400;
+            letter-spacing: 0.4rem;
+            max-width: 77rem;
+        }
+        .btnActive{
+            position: relative;
+            background-color: transparent;
+            margin-right: 8rem;
+            border: none;
+
+            .lineOne,
+            .lineTwo{
+                position: absolute;
+                display: block;
+                height: .6rem;
+                width: 5rem;
+                background-color: $color-secondary;
+
+            }
+            .lineTwo{
+                transform: rotate(90deg);
+                transition: all .2s;
+            }
+            .rotateLine{
+                transform: rotate(0);
+            }
+        }
+    }
+    .ansContainer{
+        height: 0;
+        transition: all .2s;
+
+        display: flex;
+        gap: 3rem;
+
+        .line{
+            display: block;
+            height: .6rem;
+            width: 20rem;
+            background-color: $color-secondary;
+            margin-top: 1.4rem;
+            transition-delay: 1s;
+            display: none;
+        }
+        .ans{
+            font-size: 2rem;
+            letter-spacing: .2rem;
+            margin-right: 5rem;
+            transition-delay: 1s;
+            display: none;
+        }
+
+        .activeContent{
+            display: inline-block;
+        }
+    }
+
+    .activeDropdown{
+        padding-top: 3rem;
+        height: min-content;
+    }
+}
