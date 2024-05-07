@@ -1,0 +1,40 @@
+@import '../../../../styles/utils/base';
+
+.faqContainer{
+    position: relative;
+    padding: 5rem 15rem;
+
+    @include response(L-desktop){
+        padding: 5rem 10rem;
+    }
+
+    @include response(phone){
+        padding: 5rem;
+    }
+
+    .heading{
+        font-size: 3rem;
+        font-weight: 400;
+        letter-spacing: .3rem;
+        color: $color-secondary;
+        text-align: center;
+    }
+    .faqList{
+        margin: 4rem 0;
+        border-top: 1px solid $color-dark;
+    }
+
+    &::before{
+        content: '';
+        display: block;
+        height: 1px;
+        width: 85%;
+        background-color: $color-dark;
+
+        position: absolute;
+        top: 0;
+        left: 50%;
+
+        transform: translateX(-50%);
+    }
+}
