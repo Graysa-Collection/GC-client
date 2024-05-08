@@ -1,0 +1,70 @@
+@import '../../../../styles/utils/base';
+
+.policyContent{
+    position: relative;
+    padding: 5rem 20rem;
+
+    @include response(tab-port){
+        padding: 5rem 15rem;
+    }
+    @include response(phone){
+        padding: 5rem;
+    }
+
+    .heading{
+        font-size: 3rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: .3rem;
+        color: $color-secondary;
+        margin-bottom: 9.4rem;
+        text-align: center;
+
+        @include response(phone){
+            margin-bottom: 5rem;
+        }
+    }
+
+    p,
+    h3{
+        font-size: 2.1rem;
+        letter-spacing: .3rem;
+        line-height: 1.5;
+        margin-bottom: 2rem;
+    }
+
+    h3{
+        font-weight: 500;
+    }
+    
+    .list{
+        p{
+            margin-bottom: 0;
+        }
+    }
+
+    ul{
+        margin-bottom: 2rem;
+
+        li{
+            font-size: 2.1rem;
+            letter-spacing: .3rem;
+            line-height: 1.5;
+            margin-left: 5rem;
+        }
+    }
+
+    &::before{
+        content: '';
+        display: block;
+        height: 1px;
+        width: 85%;
+        background-color: $color-dark;
+
+        position: absolute;
+        top: 0;
+        left: 50%;
+
+        transform: translateX(-50%);
+    }
+}

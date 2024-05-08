@@ -28,10 +28,10 @@ const Footer = () => {
                 <SocialMedia/>
                 <ul className={list}>
                     <li className={item}>
-                        <Link className={link} href='#'>faq</Link>
+                        <Link className={link} href='/faq'>faq</Link>
                     </li>
                     <li className={item}>
-                        <Link className={link} href='#'>policy</Link>
+                        <Link className={link} href='privacy-policy'>policy</Link>
                     </li>
                     <li className={item}>
                         <Link className={link} href='/contact'>contact</Link>
