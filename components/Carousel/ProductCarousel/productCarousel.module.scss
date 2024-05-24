@@ -1,0 +1,29 @@
+@import '../../../styles/utils/base';
+
+.embla{
+    overflow: hidden;
+    margin: auto;
+    
+    .embla__container{
+        display: flex;
+        touch-action: pan-y pinch-zoom;
+        height: 100%;
+
+        @include response(tab-port){
+            gap: 2rem;
+        }
+
+        .embla__slide{
+            flex: 0 0 (100% / 4);
+            width: 100%;
+            min-width: 0;
+
+            @include response(tab-port){
+                flex: 0 0 (100% / 2);
+            }
+            @include response(phone){
+                flex: 0 0 (70%);
+            }
+        }
+    }
+}

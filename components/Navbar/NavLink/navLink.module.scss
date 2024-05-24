@@ -3,13 +3,20 @@
 .navItem{
     font-size: 1.8rem;
     font-weight: 300;
-    color: $color-dark;
     letter-spacing: .2rem;
     text-transform: uppercase;
 
+    @include response(phone){
+        font-size: 3rem;
+    }
+    
     .navLink{
         text-decoration: none;
         color: $color-dark;
+
+        @include response(phone){
+            color: $color-light;
+        }
     }
 
     .highlight{
@@ -19,6 +26,10 @@
         margin-top: 1.4rem;
         background-color: $color-secondary;
         transition: all .25s;
+
+        @include response(phone){
+            margin-top: .8rem;
+        }
     }
 
     .highlightActive{

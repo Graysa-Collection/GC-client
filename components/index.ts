@@ -10,3 +10,5 @@ export * from './CartSidebar';
 export * from './CheckoutCart'
 export * from './LoginSidebar';
 export * from './Form';
+export * from './Carousel'
+export * from './ProductPagination';

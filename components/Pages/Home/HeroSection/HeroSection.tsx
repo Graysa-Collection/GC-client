@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import { Button } from '@/components';
+import { Button, ImageCarousel } from '@/components';
 
 import imageOne from '@/assets/images/Image 2.png';
 import style from './heroSection.module.scss';
@@ -18,7 +18,8 @@ const HeroSection = () => {
     return(
         <section className={heroSection}>
             <div className={sliderContainer}>
-                <Image className={img} src={imageOne} alt='slider image' priority/>
+                <ImageCarousel/>
+                {/* <Image className={img} src={imageOne} alt='slider image' priority/> */}
             </div>
             <div className={content}>
                 <h1 className={heading}>graysa collection</h1>

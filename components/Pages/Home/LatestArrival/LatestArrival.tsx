@@ -13,9 +13,11 @@ const LatestArrival = () => {
             <div className={headingContainer}>
                 <h1 className={heading}>Latest arrival</h1>
             </div>
-            <ProductDisplayContainer title='apparel' link='#' bgColor='pink'/>
-            <ProductDisplayContainer title='beauty & care' link='#' bgColor='green' reverse/>
-            <ProductDisplayContainer title='books' link='#' bgColor='orange'/>
+            <div>
+                <ProductDisplayContainer title='apparel' link='#' bgColor='pink'/>
+                <ProductDisplayContainer title='beauty & care' link='#' bgColor='green' reverse/>
+                <ProductDisplayContainer title='books' link='#' bgColor='orange'/>
+            </div>
         </section>
     );
 }

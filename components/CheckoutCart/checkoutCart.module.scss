@@ -13,6 +13,11 @@
         height: 12.1rem;
         width: 9.8rem;
 
+        @include response(tab-port){
+            height: max-content;
+            width: 15rem;
+        }
+
         .img{
             height: 100%;
             width: 100%;
@@ -37,6 +42,10 @@
                 font-size: 1.8rem;
                 letter-spacing: .3rem;
                 margin-bottom: 4rem;
+
+                @include response(tab-port){
+                    margin-bottom: 2rem;
+                }
             }
             .colorSize{
                 font-size: 1.4rem;

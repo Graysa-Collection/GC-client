@@ -12,13 +12,13 @@ const {
     highlightActive
 } = style;
 
-const NavLink = ({href, linkName}: INavLinkProps) => {
+const NavLink = ({ href, linkName, onClick }: INavLinkProps) => {
     const path = usePathname();
     const isCurrentPath = path === href || (href !== '/' && path.startsWith(href));
     
     return(
         <li className={navItem}>
-            <Link className={navLink} href={href}>{linkName}</Link>
+            <Link className={navLink} href={href} onClick={onClick}>{linkName}</Link>
             <span className={ isCurrentPath ? 
                 `${highlight} ${highlightActive}` 
                 :highlight}/>

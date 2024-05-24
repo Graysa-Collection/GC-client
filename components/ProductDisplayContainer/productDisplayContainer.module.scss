@@ -4,6 +4,10 @@
     padding: 8.7rem 20rem;
     background-color: grey;
 
+    @include response(phone){
+        padding: 8rem 5rem;
+    }
+
     .headerContainer{
         margin-bottom: 2.4rem;
 
@@ -25,14 +29,22 @@
             width: 100%;
             background-color: $color-secondary;
         }
+        .btnContainerDesktop{
+            @include response(phone){
+                display: none;
+            }
+        }
     }
     .reverseHeader{
         flex-direction: row-reverse;
     }
-    .listContainer{
-        display: flex;
-        justify-content: space-between;
-        gap: 2.6rem;
+    .btnContainerMobile{
+        display: none;
+
+        @include response(phone){
+            display: block;
+            margin-top: 5rem;
+        }
     }
 }
 

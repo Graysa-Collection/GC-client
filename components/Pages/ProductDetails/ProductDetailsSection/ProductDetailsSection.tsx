@@ -31,11 +31,11 @@ const ProductDetailsSection = () => {
     return(
         <section className={productDetailsSection}>
             <div className={imageContainer}>
-                <Image src={imageOne} className={imgOne} alt='product img'/>
-                <Image src={imageTwo} className={imgTwo} alt='product img'/>
-                <Image src={imageThree} className={imgThree} alt='product img'/>
-                <Image src={imageFour} className={imgFour} alt='product img'/>
-                <Image src={imageFive} className={imgFive} alt='product img'/>
+                <Image src={imageOne} className={imgOne} height={1000} width={1000} alt='product img' priority/>
+                <Image src={imageTwo} className={imgTwo} height={1000} width={1000} alt='product img' priority/>
+                <Image src={imageThree} className={imgThree} height={1000} width={1000} alt='product img' priority/>
+                <Image src={imageFour} className={imgFour} height={1000} width={1000} alt='product img' priority/>
+                <Image src={imageFive} className={imgFive} height={1000} width={1000} alt='product img' priority/>
             </div>
             <div className={contentContainer}>
                 <h1 className={heading}>mint green set</h1>

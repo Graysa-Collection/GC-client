@@ -5,6 +5,10 @@
     gap: 10rem;
     margin-bottom: 10rem;
 
+    @include response(phone){
+        flex-direction: column-reverse;
+    }
+
     .imageContainer{
         height: 63rem;
         max-width: 51rem;
@@ -43,19 +47,38 @@
             display: flex;
             align-items: center;
             gap: 5rem;
+
+            @include response(phone){
+                font-size: 5rem;
+            }
         }
         .description{
             padding: 4rem 0;
             font-size: 2rem;
             color: $color-dark;
             max-width: 69rem;
+
+            @include response(phone){
+                font-size: 2.5rem;
+            }
         }
         .btnContainer{
             padding-bottom: 5rem;
             border-bottom: 1px solid $color-secondary;
+
+            @include response(phone){
+                border-bottom: none;
+
+                display: flex;
+                justify-content: center;
+            }
         }
     }
 }
 .reverseContentAlign{
     justify-content: center;
+
+    @include response(phone){
+        flex-direction: column;
+    }
 }

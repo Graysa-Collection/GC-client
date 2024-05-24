@@ -4,6 +4,10 @@
     .newArrivalProduct{
         display: flex;
 
+        @include response(phone){
+            flex-direction: column;
+        }
+
         .contentContainer{
             flex: 1;
             padding: 17.4rem 2rem;
@@ -13,6 +17,10 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+
+            @include response(phone){
+                padding: 15rem 0;
+            }
 
             .heading{
                 font-size: 2.4rem;
@@ -36,11 +44,17 @@
         }
         .imgContainer{
             flex: 1;
-            background-color: orange;
+            overflow: hidden;
+            background-color: orangered;            
+
             .img{
                 height: 100%;
                 width: 100%;
                 object-fit: cover;
+
+                @include response(phone){
+                    transform: scale(1.1);
+                }
             }
         }
     }
