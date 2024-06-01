@@ -1,0 +1,42 @@
+@import '../../styles/utils/base';
+
+.productList{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    @include response(tab-port){
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    @include response(phone){
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.paginationContainer{
+    list-style: none;
+    font-size: 1.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 4rem 0;
+
+}
+.pageNumber{
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    border-radius: 3px;
+    font-weight: 400;
+    
+    &:hover{
+        background-color: $color-primary;
+        color: $color-light;
+    }
+}
+.active{
+    background-color: $color-secondary;
+    color: $color-light;
+}

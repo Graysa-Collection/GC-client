@@ -2,7 +2,6 @@
 
 .contentSection{
     position: relative;
-    background-color: orangered;
     
     .bgContainer{
         position: absolute;
@@ -28,5 +27,9 @@
         position: relative;
         z-index: 1;
         padding: 10rem 23rem;
+
+        @include response(phone){
+            padding: 10rem 5rem 1px 5rem;
+        }
     }
 }

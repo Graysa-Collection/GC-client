@@ -8,6 +8,15 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 10rem;
 
+    @include response(tab-port){
+        padding: 5rem 10rem;
+    }
+
+    @include response(phone){
+        padding: 5rem;
+        grid-template-columns: 1fr;
+    }
+
     .imageContainer{
         display: grid;
         grid-template-columns: repeat(4, [col-start] 1fr [col-end]);
@@ -17,22 +26,53 @@
         .imgOne{
             grid-column: col-start 1 / col-end 3;
             grid-row: row-start 1 / row-end 4;
+
+            @include response(phone){
+                grid-column: col-start 1 / col-end 4;
+                grid-row: row-start 1 / row-end 3;
+
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                object-position: top;
+                background-color: orangered;
+            }
         }
         .imgTwo{
             grid-column: col-start 4 / col-end 4;
             grid-row: row-start 1 / row-end 1;
+
+            @include response(phone){
+                grid-column: col-start 1 / col-end 1;
+                grid-row: row-start 4 / row-end 4;
+            }
         }
         .imgThree{
             grid-column: col-start 4 / col-end 4;
             grid-row: row-start 2 / row-end 2;
+
+            @include response(phone){
+                grid-column: col-start 2 / col-end 2;
+                grid-row: row-start 4 / row-end 4;
+            }
         }
         .imgFour{
             grid-column: col-start 4 / col-end 4;
             grid-row: row-start 3 / row-end 3;
+
+            @include response(phone){
+                grid-column: col-start 3 / col-end 3;
+                grid-row: row-start 4 / row-end 4;
+            }
         }
         .imgFive{
             grid-column: col-start 4 / col-end 4;
             grid-row: row-start 4 / row-end 4;
+
+            @include response(phone){
+                grid-column: col-start 4 / col-end 4;
+                grid-row: row-start 4 / row-end 4;
+            }
         }
 
         .imgOne,
@@ -131,6 +171,10 @@
         }
         .btnContainer{
             margin-bottom: 3rem;
+
+            @include response(phone){
+                margin-bottom: 7rem;
+            }
         }
         .detailContainer{
             .heading{
@@ -139,6 +183,10 @@
                 font-weight: 400;
                 letter-spacing: .5rem;
                 color: $color-dark;
+
+                @include response(phone){
+                    font-size: 2.3rem;
+                }
             }
             .border{
                 display: block;
@@ -152,6 +200,10 @@
                 font-size: 2rem;
                 line-height: 1.5;
                 max-width: 52rem;
+
+                @include response(phone){
+                    font-size: 2.2rem;
+                }
             }
         }
     }

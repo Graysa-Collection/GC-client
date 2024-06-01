@@ -1,6 +1,13 @@
 @import '../../styles/utils/base';
 
-.navbar{    
+.navbar{
+    
+    @include response(phone){
+        position: relative;
+        overflow-x: hidden;
+        height: max-content;
+    }
+
     .container{
         position: relative;
         
@@ -10,6 +17,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @include response(phone){
+            justify-content: space-between;
+            padding: 1rem 5rem;
+        }
         
         .logoContainer{
             height: 8.2rem;
@@ -17,6 +29,11 @@
             
             display: flex;
             align-items: center;
+
+            @include response(phone){
+                height: 13rem;
+                width: 35rem;
+            }
             
             .logo{
                 height: 100%;
@@ -32,7 +49,13 @@
             margin-right: 10rem;
             
             display: flex;
+            align-items: center;
             gap: 2rem;
+
+            @include response(phone){
+                margin-right: 0;
+                right: 5rem;
+            }
             
             .item{
                 font-size: 1.8rem;
@@ -41,15 +64,80 @@
                 text-transform: uppercase;
                 color: $color-dark;
                 cursor: pointer;
+
+                
+                @include response(phone){
+                    &:first-of-type{
+                        display: none;
+                    }
+                }
+                &:last-of-type{
+                    
+                    display: block;
+                    position: relative;
+                    height: 4rem;
+                    width: 4rem;
+                    overflow: hidden;
+                    
+                    display: none;
+
+                    .iconOpen,
+                    .iconClose{
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+
+                        height: 100%;
+                        width: 100%;
+                        object-fit: contain;
+
+                        transition: all .2s ease-in;
+                    }
+
+                    .iconClose{
+                        right: -10rem;
+                    }
+                    .activeIconClose{
+                        right: 0;
+                        display: inline-block;
+                    }
+                    .activeIconOpen{
+                        right: -10rem;
+                    }
+
+                    @include response(phone){
+                        display: block;
+                    }
+                }
             }
         }
     }
     .navContainer{
         padding: 2rem 16% 0 16%;
 
+        
         @include response(L-desktop){
             padding: 2rem 12% 0 12%;
         }
+        
+        @include response(phone){
+            position: absolute;
+            top: 15rem;
+            right: 0;
+            width: 100%;
+            z-index: 999;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            background-color: $color-primary;
+            padding: 10rem 5rem;
+            height: calc( 100svh -  15rem);
+            transition: all .2s ease-in;
+            transform: translateX(100%);
+        }
+        
 
         .navList{
             list-style: none;
@@ -57,10 +145,56 @@
             display: flex;
             justify-content: space-between;
             gap: 2rem;
+
+            @include response(phone){
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 5rem;
+            }
+        }
+        .footer{
+            display: none;
+
+            @include response(phone){
+                display: block;                
+                display: flex;
+                justify-content: flex-end;
+    
+                .link{
+                    font-size: 2.5rem;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    color: $color-light;
+                    letter-spacing: .3rem;
+                    text-decoration: none;
+    
+                    &:active,
+                    &:focus{
+                        color: $color-secondary;
+                    }
+                }
+            }
+        }
+    }
+    .activeNavList{
+        @include response(phone){
+            transform: translateX(0);
         }
     }
 }
 
 .active{
     border-bottom: 2px solid $color-secondary;
+}
+
+.activeNavbar{
+    height: 100svh;
+
+    @include response(phone){
+        position: fixed;
+        z-index: 99999;
+        width: 100%;
+        background-color: white;
+    }
 }

@@ -3,10 +3,19 @@
 .cartInfo{
     position: relative;
     padding: 5rem 15rem;
-    height: calc(100svh - 24.8rem);
 
     display: flex;
     gap: 5rem;
+
+    @include response(L-desktop){
+        padding: 5rem 10rem;
+    }
+    @include response(vp-800){
+        flex-direction: column;
+    }
+    @include response(phone){
+        padding: 5rem;
+    }
 
     .cartListContainer{
         flex: 1;
@@ -24,10 +33,20 @@
             width: 100%;
             padding-bottom: 2rem;
             border-bottom: 1px solid $color-light-grey;
+
+            @include response(vp-800){
+                text-align: center;
+                font-size: 4rem;
+                padding-bottom: 4rem;
+            }
         }
         .cartList{
-            height: 100%;
+            height: 45rem;
             overflow: auto;
+
+            @include response(vp-800){
+                height: max-content;
+            }
         }
     }
     .cartSummary{

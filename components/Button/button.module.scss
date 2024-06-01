@@ -12,11 +12,18 @@
     border: .2rem solid grey;
     white-space: nowrap;
     cursor: pointer;
+    
+    @include response(phone){
+        font-size: 2.5rem;
+        padding: 1.5rem 4rem;
+        border: .4rem solid grey;
+        font-weight: 500;
+    }
 }
 
 .btnSecondary{
     color: $color-secondary;
-    border: .2rem solid $color-secondary;
+    border-color: $color-secondary;
     transition: all .25s;
     
     &:hover{
@@ -40,5 +47,5 @@
 
 .btnColorDark{
     color: $color-dark;
-    border: .2rem solid $color-dark;
+    border-color: $color-dark;
 }

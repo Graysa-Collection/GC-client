@@ -18,6 +18,10 @@
             text-transform: uppercase;
             letter-spacing: 1rem;
             color: $color-secondary;
+
+            @include response(phone){
+                text-align: center;
+            }
         }
         .paragraph{
             font-size: 2rem;

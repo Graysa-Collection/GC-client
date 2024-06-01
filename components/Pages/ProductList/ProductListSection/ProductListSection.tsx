@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import { ProductCard, FilterDropdown } from '@/components';
+import { ProductCard, FilterDropdown, ProductPagination } from '@/components';
 import { IProductListSectionProps } from './ProductListSection.type';
 
 import downArrow from '@/assets/icon/downArrow.svg';
@@ -22,6 +22,9 @@ const {
 } = style;
 
 const ProductListSection = ({ bgColor } : IProductListSectionProps) => {
+    const PRODUCT = 100
+    const PRODUCT_ARRAY = Array.from(Array(PRODUCT).keys())
+
     return(
         <section className={bgColor === 'pink' ? `${productListSection} ${bgColorPink}` : bgColor === 'green' ? `${productListSection} ${bgColorGreen}` : bgColor === 'yellow' ? `${productListSection} ${bgColorYellow}` : productListSection}>
             <div className={header}>
@@ -37,15 +40,7 @@ const ProductListSection = ({ bgColor } : IProductListSectionProps) => {
                 <FilterDropdown/>
             </div>
             <div className={productList}>
-                <ProductCard/>
-                <ProductCard/>
-                <ProductCard/>
-                <ProductCard/>
-                <ProductCard/>
-                <ProductCard/>
-                <ProductCard/>
-                <ProductCard/>
-                <ProductCard/>
+                <ProductPagination data={PRODUCT_ARRAY}/>
             </div>
         </section>
     );

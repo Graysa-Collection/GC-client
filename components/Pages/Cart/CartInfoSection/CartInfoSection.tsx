@@ -24,6 +24,9 @@ const CartInfoSection = () => {
                     <CheckoutCart/>
                     <CheckoutCart/>
                     <CheckoutCart/>
+                    <CheckoutCart/>
+                    <CheckoutCart/>
+                    <CheckoutCart/>
                 </div>
             </div>
             <div className={cartSummary}>

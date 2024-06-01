@@ -3,6 +3,7 @@ import { ProductCard } from '@/components/ProductCard';
 
 import style from './productDisplayContainer.module.scss';
 import { IProductDisplayContainerProps } from './ProductDisplayContainer.type';
+import ProductCarousel from '../Carousel/ProductCarousel/ProductCarousel';
 
 const {
     productDisplayContainer,
@@ -13,8 +14,13 @@ const {
     backgroundColorPink,
     backgroundColorGreen,
     backgroundColorYellow,
-    reverseHeader
+    reverseHeader,
+    btnContainerDesktop,
+    btnContainerMobile
 } = style;
+
+const SLIDE_COUNT = 4
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 
 const ProductDisplayContainer = ({ title, link, bgColor, reverse }: IProductDisplayContainerProps) => {
     return(
@@ -26,13 +32,15 @@ const ProductDisplayContainer = ({ title, link, bgColor, reverse }: IProductDisp
             <div className={reverse ? `${headerContainer} ${reverseHeader}` : headerContainer}>
                 <h3 className={heading}>{title}</h3>
                 <span className={separator}/>
-                <Button secondary colorGold link={link}>explore all</Button>
+                <div className={btnContainerDesktop}>
+                    <Button secondary colorGold link={link}>explore all</Button>
+                </div>
             </div>
             <div className={listContainer}>
-                <ProductCard/>
-                <ProductCard/>
-                <ProductCard/>
-                <ProductCard/>
+                <ProductCarousel slides={SLIDES}/>
+            </div>
+            <div className={btnContainerMobile}>
+                <Button secondary colorGold link={link}>explore all</Button>
             </div>
         </div>
     );

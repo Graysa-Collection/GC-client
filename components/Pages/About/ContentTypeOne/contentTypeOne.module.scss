@@ -5,6 +5,11 @@
     gap: 10rem;
     margin-bottom: 10rem;
 
+    @include response(phone){
+        flex-direction: column;
+        gap: 5rem;
+    }
+
     .imageContainer{
         height: 63rem;
         max-width: 51rem;
@@ -37,12 +42,20 @@
             align-items: center;
             gap: 5rem;
 
+            @include response(phone){
+                font-size: 5rem;
+            }
+
             &::after{
                 content: '';
                 display: block;
                 height: 1px;
                 width: 100%;
                 background-color: $color-secondary;
+
+                @include response(phone){
+                    display: none;
+                }
             }
         }
         .description{
@@ -50,6 +63,14 @@
             font-size: 2rem;
             color: $color-dark;
             max-width: 69rem;
+
+            @include response(phone){
+                font-size: 2.2rem;
+            }
+        }
+        .btnContainer{
+            display: flex;
+            justify-content: center;
         }
     }
 }
